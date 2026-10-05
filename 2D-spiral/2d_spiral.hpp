@@ -1,3 +1,5 @@
+
+// MakeSpiral function generates a 2D spiral matrix of size n x n
 int** MakeSpiral(int n) {
   int** spiral = new int*[n];
   for (int i = 0; i < n; ++i) {
