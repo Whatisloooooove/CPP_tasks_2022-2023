@@ -25,7 +25,10 @@ class Matrix {
 
   T operator()(size_t row, size_t col) const { return matrix_[row][col]; }
 
-  Matrix& operator=(const Matrix& other) { matrix_ = other.matrix_; }
+  Matrix& operator=(const Matrix& other) {
+    matrix_ = other.matrix_;
+    return *this;
+  }
 
   Matrix& operator+=(const Matrix& other) {
     for (size_t row = 0; row < N; ++row) {
