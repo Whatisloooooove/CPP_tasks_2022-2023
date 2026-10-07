@@ -121,7 +121,7 @@ Matrix<N, M, T> operator*(const Matrix<N, M, T>& matr, const T& numb) {
 // out of class because it is only needed for square matrices
 template <size_t N, typename T>
 T OutTrace(const Matrix<N, N, T>& matr) {
-  T res;
+  T res{};
   for (size_t main = 0; main < N; ++main) {
     res += matr(main, main);
   }
