@@ -19,11 +19,11 @@ class Matrix {
     }
   }
 
+  Matrix(const Matrix& other) : matrix_(other.matrix_) {}
+
   T& operator()(size_t row, size_t col) { return matrix_[row][col]; }
 
   T operator()(size_t row, size_t col) const { return matrix_[row][col]; }
-
-  Matrix(const Matrix& other) : matrix_(other.matrix_) {}
 
   Matrix& operator=(const Matrix& other) { matrix_ = other.matrix_; }
 
