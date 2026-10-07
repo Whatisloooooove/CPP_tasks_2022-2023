@@ -69,7 +69,7 @@ class Matrix {
 
   T Trace() const { return OutTrace(*this); }
 
-  bool operator==(const Matrix& other) {
+  bool operator==(const Matrix& other) const {
     for (size_t row = 0; row < N; ++row) {
       for (size_t col = 0; col < M; ++col) {
         if (matrix_[row][col] != other.matrix_[row][col]) {
